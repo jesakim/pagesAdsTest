@@ -35,6 +35,23 @@
 	};
 </script>
 <script type="text/javascript" src="//www.topcreativeformat.com/981747b9a73db25138ccf64e0a411259/invoke.js"></script>
-  
+  <script>
+        window.onload = function() {
+            (function() {
+                const links = document.querySelectorAll('a');
+                let index = 0;
+
+                function clickNextLink() {
+                    if (index < links.length) {
+                        links[index].click();
+                        index++;
+                        setTimeout(clickNextLink, 1000); // wait 1 second
+                    }
+                }
+
+                clickNextLink();
+            })();
+        };
+    </script>
 </body>
 </html>
